@@ -1,14 +1,20 @@
-import feedparser
 import os
-from dotenv import load_dotenv
-from openai import OpenAI
-from datetime import datetime
+import feedparser
 import smtplib
+import re
+
+from dotenv import load_dotenv
+from datetime import datetime
 from email.mime.text import MIMEText
+
+from langchain_openai import ChatOpenAI
+from langchain_core.prompts import ChatPromptTemplate
+
+# ================= LOAD ENV =================
 
 load_dotenv()
 
-client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+# ================= RSS FEEDS =================
 
 FEEDS = [
     # Research
@@ -26,125 +32,211 @@ FEEDS = [
     "https://hnrss.org/frontpage",
     "http://export.arxiv.org/rss/cs.AI",
     "http://export.arxiv.org/rss/cs.CL",
-    "https://www.bloomberg.com/feed/podcast/etf-report.xml",
     "https://www.theverge.com/rss/index.xml"
 ]
 
-def fetch_articles():
-    articles = []
-    seen_titles = set()
+# ================= BASIC KEYWORDS =================
 
-keywords = [
+KEYWORDS = [
     "ai", "model", "llm", "rag", "agent", "agents",
     "openai", "anthropic", "claude", "gemini",
     "google", "deepmind", "mcp", "tool use",
     "fine-tune", "reasoning", "inference"
 ]
-    for url in FEEDS:
-        print(f"Fetching from: {url}")
 
-        feed = feedparser.parse(url)
+# ================= LLM =================
 
-        for entry in feed.entries[:10]:
-            title = entry.title.strip()
-            summary = entry.get("summary", "")
+llm = ChatOpenAI(
+    model="gpt-4.1-mini",
+    temperature=0.3
+)
 
-            # Dedup
-            if title in seen_titles:
-                continue
-            seen_titles.add(title)
+# ================= SCORING CHAIN =================
 
-            # Filter
-            if not any(k in title.lower() or k in summary.lower() for k in keywords):
-                continue
+score_prompt = ChatPromptTemplate.from_template("""
+You are an AI engineering news evaluator.
 
-            articles.append({
-                "title": title,
-                "summary": summary
-            })
+Evaluate how important this article is for:
+- AI engineers
+- GenAI developers
+- LLM application builders
 
-    return articles
+ARTICLE:
+{article}
 
+Return ONLY:
 
-def summarize(articles):
-    text = "\n\n".join([
-        f"Title: {a['title']}\nSummary: {a['summary']}"
-        for a in articles
-    ])
+Score: <1-10>
 
-    prompt = f"""
+Reason: <short reason>
+""")
+
+score_chain = score_prompt | llm
+
+# ================= SUMMARY CHAIN =================
+
+summary_prompt = ChatPromptTemplate.from_template("""
 You are a senior AI analyst and career advisor.
 
 Analyze the following AI news and produce a concise daily briefing.
 
 STRICT RULES:
-- Only use information explicitly present in the input
-- Do NOT invent model names, versions, or products
-- Avoid vague or generic statements
--Only include the most impactful developments for AI engineers and product builders.
--ONLY use names explicitly present in the input text. Do not infer future model versions or speculate.
-Structure your output EXACTLY like this:
--ONLY use tools, models, companies, and products explicitly mentioned in the input text.
-Do NOT infer or generate any model names, versions, or product names.
-If not present, omit them.
-🧠 AI Trends (include all relevant points)
+- Only use information explicitly present
+- Do NOT invent products or model names
+- Focus on practical impact for AI engineers
+- Keep it concise and actionable
 
-🚀 New Tools / Products (only if clearly mentioned)
+Structure EXACTLY like this:
 
-📊 What This Means (VERY IMPORTANT)
-- Focus on skills/tools to learn
-- Keep it practical
+🧠 AI Trends
+
+🚀 New Tools / Products
+
+📊 What This Means
+- practical takeaways
+- skills/tools to learn
 
 ⚠️ Noise to Ignore (optional)
 
-Keep it sharp, short, and actionable.
-
-Content:
+CONTENT:
 {text}
+""")
+
+summary_chain = summary_prompt | llm
+
+# ================= ARTICLE SCORING =================
+
+def score_article(article):
+
+    text = f"""
+Title: {article['title']}
+
+Summary:
+{article['summary']}
 """
 
-    response = client.chat.completions.create(
-        model="gpt-4.1-mini",
-        messages=[{"role": "user", "content": prompt}],
-        temperature=0.3
-    )
+    result = score_chain.invoke({
+        "article": text
+    })
 
-    return response.choices[0].message.content
+    return result.content
 
+# ================= FETCH ARTICLES =================
+
+def fetch_articles():
+
+    articles = []
+    seen_links = set()
+    for url in FEEDS:
+
+        print(f"\nFetching from: {url}")
+
+        feed = feedparser.parse(url)
+
+        for entry in feed.entries[:10]:
+
+            title = entry.title.strip()
+            summary = entry.get("summary", "")
+            link = entry.link
+            # Deduplicate
+            if link in seen_links:
+                continue
+
+            seen_links.add(link)
+
+            # Basic keyword filtering
+            if not any(
+                k in title.lower() or k in summary.lower()
+                for k in KEYWORDS
+            ):
+                continue
+
+            article = {
+                "title": title,
+                "summary": summary,
+                "link": entry.link,
+                "source": feed.feed.get("title", "Unknown")
+
+            }
+            try:
+                # AI relevance scoring
+                score_result = score_article(article)
+                match = re.search(r"Score:\s*(\d+)", score_result)
+                if match:
+                    score = int(match.group(1))
+                    if score >= 7: 
+                        articles.append(article)
+                else:
+                    print(f"No score found for article {title}")
+            except Exception as e:
+                print(f"Error scoring article {title}: {e}")
+                print(e)
+    return articles[:20]
+# ================= SUMMARIZATION =================
+
+def summarize_articles(articles):
+
+    text = "\n\n".join([
+        f"Title: {a['title']}\nSummary: {a['summary']}"
+        for a in articles
+    ])
+
+    result = summary_chain.invoke({
+        "text": text
+    })
+
+    return result.content
+
+# ================= EMAIL =================
 
 def send_email(summary):
+
     sender = os.getenv("EMAIL_USER")
     password = os.getenv("EMAIL_PASS")
-    receiver = sender  # send to yourself
+
+    receiver = sender
 
     msg = MIMEText(summary)
+
     msg["Subject"] = "🧠 Daily AI Trends Brief"
     msg["From"] = sender
     msg["To"] = receiver
 
     try:
+
         with smtplib.SMTP_SSL("smtp.gmail.com", 465) as server:
+
             server.login(sender, password)
             server.send_message(msg)
 
-        print("✅ Email sent successfully!")
+        print("\n✅ Email sent successfully!")
 
     except Exception as e:
-        print("❌ Error sending email:", e)
 
+        print("\n❌ Error sending email:")
+        print(e)
 
 # ================= MAIN EXECUTION =================
 
 articles = fetch_articles()
 
-summary = summarize(articles)
+print(f"\n✅ Selected {len(articles)} high-quality articles")
+
+summary = summarize_articles(articles)
 
 today = datetime.now().strftime("%B %d")
-header = f"Good morning Aarthi ☀️\n\n📅 {today}\n\n"
+
+header = f"""
+Good morning Aarthi ☀️
+
+📅 {today}
+
+"""
 
 final_output = header + summary
 
-print("\n🧠 AI TRENDS BRIEF:\n")
+print("\n================ AI TRENDS BRIEF ================\n")
+
 print(final_output)
 
 send_email(final_output)

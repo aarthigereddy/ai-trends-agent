@@ -136,3 +136,521 @@ IndentationError: unexpected indent
   File "/Users/agereddy/ai-trends-agent/main.py", line 43
     for url in FEEDS:
 IndentationError: unexpected indent
+  File "/Users/agereddy/ai-trends-agent/main.py", line 43
+    for url in FEEDS:
+IndentationError: unexpected indent
+  File "/Users/agereddy/ai-trends-agent/main.py", line 43
+    for url in FEEDS:
+IndentationError: unexpected indent
+  File "/Users/agereddy/ai-trends-agent/main.py", line 43
+    for url in FEEDS:
+IndentationError: unexpected indent
+  File "/Users/agereddy/ai-trends-agent/main.py", line 43
+    for url in FEEDS:
+IndentationError: unexpected indent
+  File "/Users/agereddy/ai-trends-agent/main.py", line 43
+    for url in FEEDS:
+IndentationError: unexpected indent
+  File "/Users/agereddy/ai-trends-agent/main.py", line 43
+    for url in FEEDS:
+IndentationError: unexpected indent
+  File "/Users/agereddy/ai-trends-agent/main.py", line 43
+    for url in FEEDS:
+IndentationError: unexpected indent
+  File "/Users/agereddy/ai-trends-agent/main.py", line 43
+    for url in FEEDS:
+IndentationError: unexpected indent
+  File "/Users/agereddy/ai-trends-agent/main.py", line 43
+    for url in FEEDS:
+IndentationError: unexpected indent
+  File "/Users/agereddy/ai-trends-agent/main.py", line 43
+    for url in FEEDS:
+IndentationError: unexpected indent
+  File "/Users/agereddy/ai-trends-agent/main.py", line 43
+    for url in FEEDS:
+IndentationError: unexpected indent
+  File "/Users/agereddy/ai-trends-agent/main.py", line 43
+    for url in FEEDS:
+IndentationError: unexpected indent
+  File "/Users/agereddy/ai-trends-agent/main.py", line 43
+    for url in FEEDS:
+IndentationError: unexpected indent
+  File "/Users/agereddy/ai-trends-agent/main.py", line 43
+    for url in FEEDS:
+IndentationError: unexpected indent
+  File "/Users/agereddy/ai-trends-agent/main.py", line 43
+    for url in FEEDS:
+IndentationError: unexpected indent
+  File "/Users/agereddy/ai-trends-agent/main.py", line 43
+    for url in FEEDS:
+IndentationError: unexpected indent
+  File "/Users/agereddy/ai-trends-agent/main.py", line 43
+    for url in FEEDS:
+IndentationError: unexpected indent
+  File "/Users/agereddy/ai-trends-agent/main.py", line 43
+    for url in FEEDS:
+IndentationError: unexpected indent
+  File "/Users/agereddy/ai-trends-agent/main.py", line 43
+    for url in FEEDS:
+IndentationError: unexpected indent
+  File "/Users/agereddy/ai-trends-agent/main.py", line 43
+    for url in FEEDS:
+IndentationError: unexpected indent
+/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/agereddy/ai-trends-agent/main.py", line 171, in <module>
+    summary = summarize_langchain(articles)
+  File "/Users/agereddy/ai-trends-agent/main.py", line 66, in summarize_langchain
+    result = chain.invoke({"text": text})
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/langchain_core/runnables/base.py", line 3268, in invoke
+    input_ = context.run(step.invoke, input_, config)
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/langchain_core/language_models/chat_models.py", line 395, in invoke
+    self.generate_prompt(
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/langchain_core/language_models/chat_models.py", line 1025, in generate_prompt
+    return self.generate(prompt_messages, stop=stop, callbacks=callbacks, **kwargs)
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/langchain_core/language_models/chat_models.py", line 842, in generate
+    self._generate_with_cache(
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/langchain_core/language_models/chat_models.py", line 1091, in _generate_with_cache
+    result = self._generate(
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/langchain_openai/chat_models/base.py", line 1213, in _generate
+    raise e
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/langchain_openai/chat_models/base.py", line 1208, in _generate
+    raw_response = self.client.with_raw_response.create(**payload)
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/openai/_legacy_response.py", line 367, in wrapped
+    return cast(LegacyAPIResponse[R], func(*args, **kwargs))
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/openai/resources/chat/completions/completions.py", line 1211, in create
+    return self._post(
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/openai/_base_client.py", line 1314, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/openai/_base_client.py", line 1087, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.AuthenticationError: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-proj-********************************************************************************************************************************************************cv8A. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'code': 'invalid_api_key', 'param': None}, 'status': 401}
+/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/agereddy/ai-trends-agent/main.py", line 171, in <module>
+    summary = summarize_langchain(articles)
+  File "/Users/agereddy/ai-trends-agent/main.py", line 66, in summarize_langchain
+    result = chain.invoke({"text": text})
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/langchain_core/runnables/base.py", line 3268, in invoke
+    input_ = context.run(step.invoke, input_, config)
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/langchain_core/language_models/chat_models.py", line 395, in invoke
+    self.generate_prompt(
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/langchain_core/language_models/chat_models.py", line 1025, in generate_prompt
+    return self.generate(prompt_messages, stop=stop, callbacks=callbacks, **kwargs)
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/langchain_core/language_models/chat_models.py", line 842, in generate
+    self._generate_with_cache(
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/langchain_core/language_models/chat_models.py", line 1091, in _generate_with_cache
+    result = self._generate(
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/langchain_openai/chat_models/base.py", line 1213, in _generate
+    raise e
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/langchain_openai/chat_models/base.py", line 1208, in _generate
+    raw_response = self.client.with_raw_response.create(**payload)
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/openai/_legacy_response.py", line 367, in wrapped
+    return cast(LegacyAPIResponse[R], func(*args, **kwargs))
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/openai/resources/chat/completions/completions.py", line 1211, in create
+    return self._post(
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/openai/_base_client.py", line 1314, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/openai/_base_client.py", line 1087, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.AuthenticationError: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-proj-********************************************************************************************************************************************************cv8A. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'code': 'invalid_api_key', 'param': None}, 'status': 401}
+/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/agereddy/ai-trends-agent/main.py", line 171, in <module>
+    summary = summarize_langchain(articles)
+  File "/Users/agereddy/ai-trends-agent/main.py", line 66, in summarize_langchain
+    result = chain.invoke({"text": text})
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/langchain_core/runnables/base.py", line 3268, in invoke
+    input_ = context.run(step.invoke, input_, config)
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/langchain_core/language_models/chat_models.py", line 395, in invoke
+    self.generate_prompt(
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/langchain_core/language_models/chat_models.py", line 1025, in generate_prompt
+    return self.generate(prompt_messages, stop=stop, callbacks=callbacks, **kwargs)
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/langchain_core/language_models/chat_models.py", line 842, in generate
+    self._generate_with_cache(
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/langchain_core/language_models/chat_models.py", line 1091, in _generate_with_cache
+    result = self._generate(
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/langchain_openai/chat_models/base.py", line 1213, in _generate
+    raise e
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/langchain_openai/chat_models/base.py", line 1208, in _generate
+    raw_response = self.client.with_raw_response.create(**payload)
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/openai/_legacy_response.py", line 367, in wrapped
+    return cast(LegacyAPIResponse[R], func(*args, **kwargs))
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/openai/resources/chat/completions/completions.py", line 1211, in create
+    return self._post(
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/openai/_base_client.py", line 1314, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/openai/_base_client.py", line 1087, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.AuthenticationError: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-proj-********************************************************************************************************************************************************cv8A. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'code': 'invalid_api_key', 'param': None}, 'status': 401}
+/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/httpx/_transports/default.py", line 250, in handle_request
+    resp = self._pool.handle_request(req)
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/httpcore/_sync/connection_pool.py", line 256, in handle_request
+    raise exc from None
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/httpcore/_sync/connection_pool.py", line 236, in handle_request
+    response = connection.handle_request(
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/httpcore/_sync/connection.py", line 101, in handle_request
+    raise exc
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/httpcore/_sync/connection.py", line 78, in handle_request
+    stream = self._connect(request)
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/httpcore/_sync/connection.py", line 124, in _connect
+    stream = self._network_backend.connect_tcp(**kwargs)
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/httpcore/_backends/sync.py", line 215, in connect_tcp
+    sock.setsockopt(socket.IPPROTO_TCP, socket.TCP_NODELAY, 1)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/contextlib.py", line 135, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectError: [Errno 8] nodename nor servname provided, or not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/openai/_base_client.py", line 1019, in request
+    response = self._send_request(
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/openai/_client.py", line 400, in _send_request
+    return self._send_with_auth_retry(request, stream=stream, **kwargs)
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/openai/_client.py", line 378, in _send_with_auth_retry
+    response = super()._send_request(request, stream=stream, **kwargs)
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/openai/_base_client.py", line 947, in _send_request
+    return self._client.send(request, stream=stream, **kwargs)
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/httpx/_client.py", line 914, in send
+    response = self._send_handling_auth(
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/httpx/_client.py", line 942, in _send_handling_auth
+    response = self._send_handling_redirects(
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/httpx/_client.py", line 979, in _send_handling_redirects
+    response = self._send_single_request(request)
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/httpx/_client.py", line 1014, in _send_single_request
+    response = transport.handle_request(request)
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/httpx/_transports/default.py", line 250, in handle_request
+    resp = self._pool.handle_request(req)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/contextlib.py", line 135, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectError: [Errno 8] nodename nor servname provided, or not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/agereddy/ai-trends-agent/main.py", line 227, in <module>
+    summary = summarize_articles(articles)
+  File "/Users/agereddy/ai-trends-agent/main.py", line 186, in summarize_articles
+    result = summary_chain.invoke({
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/langchain_core/runnables/base.py", line 3268, in invoke
+    input_ = context.run(step.invoke, input_, config)
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/langchain_core/language_models/chat_models.py", line 395, in invoke
+    self.generate_prompt(
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/langchain_core/language_models/chat_models.py", line 1025, in generate_prompt
+    return self.generate(prompt_messages, stop=stop, callbacks=callbacks, **kwargs)
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/langchain_core/language_models/chat_models.py", line 842, in generate
+    self._generate_with_cache(
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/langchain_core/language_models/chat_models.py", line 1091, in _generate_with_cache
+    result = self._generate(
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/langchain_openai/chat_models/base.py", line 1213, in _generate
+    raise e
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/langchain_openai/chat_models/base.py", line 1208, in _generate
+    raw_response = self.client.with_raw_response.create(**payload)
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/openai/_legacy_response.py", line 367, in wrapped
+    return cast(LegacyAPIResponse[R], func(*args, **kwargs))
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/openai/resources/chat/completions/completions.py", line 1211, in create
+    return self._post(
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/openai/_base_client.py", line 1314, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/openai/_base_client.py", line 1054, in request
+    raise APIConnectionError(request=request) from err
+openai.APIConnectionError: Connection error.
+/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/httpx/_transports/default.py", line 250, in handle_request
+    resp = self._pool.handle_request(req)
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/httpcore/_sync/connection_pool.py", line 256, in handle_request
+    raise exc from None
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/httpcore/_sync/connection_pool.py", line 236, in handle_request
+    response = connection.handle_request(
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/httpcore/_sync/connection.py", line 101, in handle_request
+    raise exc
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/httpcore/_sync/connection.py", line 78, in handle_request
+    stream = self._connect(request)
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/httpcore/_sync/connection.py", line 124, in _connect
+    stream = self._network_backend.connect_tcp(**kwargs)
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/httpcore/_backends/sync.py", line 215, in connect_tcp
+    sock.setsockopt(socket.IPPROTO_TCP, socket.TCP_NODELAY, 1)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/contextlib.py", line 135, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectError: [Errno 8] nodename nor servname provided, or not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/openai/_base_client.py", line 1019, in request
+    response = self._send_request(
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/openai/_client.py", line 400, in _send_request
+    return self._send_with_auth_retry(request, stream=stream, **kwargs)
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/openai/_client.py", line 378, in _send_with_auth_retry
+    response = super()._send_request(request, stream=stream, **kwargs)
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/openai/_base_client.py", line 947, in _send_request
+    return self._client.send(request, stream=stream, **kwargs)
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/httpx/_client.py", line 914, in send
+    response = self._send_handling_auth(
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/httpx/_client.py", line 942, in _send_handling_auth
+    response = self._send_handling_redirects(
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/httpx/_client.py", line 979, in _send_handling_redirects
+    response = self._send_single_request(request)
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/httpx/_client.py", line 1014, in _send_single_request
+    response = transport.handle_request(request)
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/httpx/_transports/default.py", line 250, in handle_request
+    resp = self._pool.handle_request(req)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/contextlib.py", line 135, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectError: [Errno 8] nodename nor servname provided, or not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/agereddy/ai-trends-agent/main.py", line 225, in <module>
+    summary = summarize_articles(articles)
+  File "/Users/agereddy/ai-trends-agent/main.py", line 184, in summarize_articles
+    result = summary_chain.invoke({
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/langchain_core/runnables/base.py", line 3268, in invoke
+    input_ = context.run(step.invoke, input_, config)
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/langchain_core/language_models/chat_models.py", line 395, in invoke
+    self.generate_prompt(
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/langchain_core/language_models/chat_models.py", line 1025, in generate_prompt
+    return self.generate(prompt_messages, stop=stop, callbacks=callbacks, **kwargs)
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/langchain_core/language_models/chat_models.py", line 842, in generate
+    self._generate_with_cache(
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/langchain_core/language_models/chat_models.py", line 1091, in _generate_with_cache
+    result = self._generate(
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/langchain_openai/chat_models/base.py", line 1213, in _generate
+    raise e
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/langchain_openai/chat_models/base.py", line 1208, in _generate
+    raw_response = self.client.with_raw_response.create(**payload)
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/openai/_legacy_response.py", line 367, in wrapped
+    return cast(LegacyAPIResponse[R], func(*args, **kwargs))
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/openai/resources/chat/completions/completions.py", line 1211, in create
+    return self._post(
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/openai/_base_client.py", line 1314, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/openai/_base_client.py", line 1054, in request
+    raise APIConnectionError(request=request) from err
+openai.APIConnectionError: Connection error.
+/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/httpx/_transports/default.py", line 250, in handle_request
+    resp = self._pool.handle_request(req)
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/httpcore/_sync/connection_pool.py", line 256, in handle_request
+    raise exc from None
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/httpcore/_sync/connection_pool.py", line 236, in handle_request
+    response = connection.handle_request(
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/httpcore/_sync/connection.py", line 101, in handle_request
+    raise exc
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/httpcore/_sync/connection.py", line 78, in handle_request
+    stream = self._connect(request)
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/httpcore/_sync/connection.py", line 124, in _connect
+    stream = self._network_backend.connect_tcp(**kwargs)
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/httpcore/_backends/sync.py", line 215, in connect_tcp
+    sock.setsockopt(socket.IPPROTO_TCP, socket.TCP_NODELAY, 1)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/contextlib.py", line 135, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectError: [Errno 8] nodename nor servname provided, or not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/openai/_base_client.py", line 1019, in request
+    response = self._send_request(
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/openai/_client.py", line 400, in _send_request
+    return self._send_with_auth_retry(request, stream=stream, **kwargs)
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/openai/_client.py", line 378, in _send_with_auth_retry
+    response = super()._send_request(request, stream=stream, **kwargs)
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/openai/_base_client.py", line 947, in _send_request
+    return self._client.send(request, stream=stream, **kwargs)
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/httpx/_client.py", line 914, in send
+    response = self._send_handling_auth(
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/httpx/_client.py", line 942, in _send_handling_auth
+    response = self._send_handling_redirects(
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/httpx/_client.py", line 979, in _send_handling_redirects
+    response = self._send_single_request(request)
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/httpx/_client.py", line 1014, in _send_single_request
+    response = transport.handle_request(request)
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/httpx/_transports/default.py", line 250, in handle_request
+    resp = self._pool.handle_request(req)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/contextlib.py", line 135, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectError: [Errno 8] nodename nor servname provided, or not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/agereddy/ai-trends-agent/main.py", line 225, in <module>
+    summary = summarize_articles(articles)
+  File "/Users/agereddy/ai-trends-agent/main.py", line 184, in summarize_articles
+    result = summary_chain.invoke({
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/langchain_core/runnables/base.py", line 3268, in invoke
+    input_ = context.run(step.invoke, input_, config)
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/langchain_core/language_models/chat_models.py", line 395, in invoke
+    self.generate_prompt(
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/langchain_core/language_models/chat_models.py", line 1025, in generate_prompt
+    return self.generate(prompt_messages, stop=stop, callbacks=callbacks, **kwargs)
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/langchain_core/language_models/chat_models.py", line 842, in generate
+    self._generate_with_cache(
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/langchain_core/language_models/chat_models.py", line 1091, in _generate_with_cache
+    result = self._generate(
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/langchain_openai/chat_models/base.py", line 1213, in _generate
+    raise e
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/langchain_openai/chat_models/base.py", line 1208, in _generate
+    raw_response = self.client.with_raw_response.create(**payload)
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/openai/_legacy_response.py", line 367, in wrapped
+    return cast(LegacyAPIResponse[R], func(*args, **kwargs))
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/openai/resources/chat/completions/completions.py", line 1211, in create
+    return self._post(
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/openai/_base_client.py", line 1314, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/openai/_base_client.py", line 1054, in request
+    raise APIConnectionError(request=request) from err
+openai.APIConnectionError: Connection error.
+/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/httpx/_transports/default.py", line 250, in handle_request
+    resp = self._pool.handle_request(req)
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/httpcore/_sync/connection_pool.py", line 256, in handle_request
+    raise exc from None
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/httpcore/_sync/connection_pool.py", line 236, in handle_request
+    response = connection.handle_request(
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/httpcore/_sync/connection.py", line 101, in handle_request
+    raise exc
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/httpcore/_sync/connection.py", line 78, in handle_request
+    stream = self._connect(request)
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/httpcore/_sync/connection.py", line 124, in _connect
+    stream = self._network_backend.connect_tcp(**kwargs)
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/httpcore/_backends/sync.py", line 215, in connect_tcp
+    sock.setsockopt(socket.IPPROTO_TCP, socket.TCP_NODELAY, 1)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/contextlib.py", line 135, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectError: [Errno 8] nodename nor servname provided, or not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/openai/_base_client.py", line 1019, in request
+    response = self._send_request(
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/openai/_client.py", line 400, in _send_request
+    return self._send_with_auth_retry(request, stream=stream, **kwargs)
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/openai/_client.py", line 378, in _send_with_auth_retry
+    response = super()._send_request(request, stream=stream, **kwargs)
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/openai/_base_client.py", line 947, in _send_request
+    return self._client.send(request, stream=stream, **kwargs)
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/httpx/_client.py", line 914, in send
+    response = self._send_handling_auth(
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/httpx/_client.py", line 942, in _send_handling_auth
+    response = self._send_handling_redirects(
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/httpx/_client.py", line 979, in _send_handling_redirects
+    response = self._send_single_request(request)
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/httpx/_client.py", line 1014, in _send_single_request
+    response = transport.handle_request(request)
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/httpx/_transports/default.py", line 250, in handle_request
+    resp = self._pool.handle_request(req)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/contextlib.py", line 135, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectError: [Errno 8] nodename nor servname provided, or not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/agereddy/ai-trends-agent/main.py", line 225, in <module>
+    summary = summarize_articles(articles)
+  File "/Users/agereddy/ai-trends-agent/main.py", line 184, in summarize_articles
+    result = summary_chain.invoke({
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/langchain_core/runnables/base.py", line 3268, in invoke
+    input_ = context.run(step.invoke, input_, config)
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/langchain_core/language_models/chat_models.py", line 395, in invoke
+    self.generate_prompt(
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/langchain_core/language_models/chat_models.py", line 1025, in generate_prompt
+    return self.generate(prompt_messages, stop=stop, callbacks=callbacks, **kwargs)
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/langchain_core/language_models/chat_models.py", line 842, in generate
+    self._generate_with_cache(
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/langchain_core/language_models/chat_models.py", line 1091, in _generate_with_cache
+    result = self._generate(
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/langchain_openai/chat_models/base.py", line 1213, in _generate
+    raise e
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/langchain_openai/chat_models/base.py", line 1208, in _generate
+    raw_response = self.client.with_raw_response.create(**payload)
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/openai/_legacy_response.py", line 367, in wrapped
+    return cast(LegacyAPIResponse[R], func(*args, **kwargs))
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/openai/resources/chat/completions/completions.py", line 1211, in create
+    return self._post(
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/openai/_base_client.py", line 1314, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/openai/_base_client.py", line 1054, in request
+    raise APIConnectionError(request=request) from err
+openai.APIConnectionError: Connection error.
+/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+/Users/agereddy/ai-trends-agent/venv/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(

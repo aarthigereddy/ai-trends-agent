@@ -1,0 +1,6 @@
+feedparser
+python-dotenv
+openai
+langchain
+langchain-openai
+
